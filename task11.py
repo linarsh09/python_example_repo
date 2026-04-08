@@ -1,14 +1,16 @@
-#3variant
+#3-variant
 def remote_str(s):
-    seen = set()
+    
     result = ""
 
     for char in s:
-        if char not in seen:
-            seen.add(char)
+        if char not in result:
+            
             result += char
 
     return result
 
 s = input()
 print(remote_str(s))
+
+
