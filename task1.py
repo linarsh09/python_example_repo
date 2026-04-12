@@ -1,14 +1,1 @@
-#3variant
-def remote_str(s):
-    seen = set()
-    result = ""
-
-    for char in s:
-        if char not in seen:
-            seen.add(char)
-            result += char
-
-    return result
-
-s = input()
-print(remote_str(s))
+print("jhgfd")
