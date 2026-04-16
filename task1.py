@@ -1,4 +1,4 @@
-drf rle_encode(s):
+def rle_encode(s):
 	if not s:
 		return ""
 	result = ""
