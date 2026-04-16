@@ -8,7 +8,7 @@ def calculate_product(k, n, x):
 	if k > n:
 		return 1
 	
-	term = (1 + math.sin(k * x))/factotial(k)
+	term = (1 + math.sin(k * x))/factorial(k)
 	return term * calculate_product(k + 1, n, x)
 n = 3
 x = 1.0
