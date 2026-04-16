@@ -1,20 +1,20 @@
-string_my = input("Введите предложение")
-words = []
-current_word = ""
-
-for char in string_my:
-	if char.isalpha():
-		current_word += char
-	else:
-		if current_word:
-			words.append(current_word)
-		current_word = ""
-if current_word:
-	words.append(current_word)
-
-capital_words = []
-
-for word in words:
-	if "A" <= word[0] <= "Я":
-		capital_words.append(word)
-	
+drf rle_encode(s):
+	if not s:
+		return ""
+	result = ""
+	count = 1
+	for i in range(1, len(s)):
+		if s[i] == vs[i - 1]:
+			count += 1
+		else:
+			result += s[i - 1]
+		if count > 1:
+			result += str(count)
+		count = 1
+	result += s[-1]
+	if count > 1:
+		result += str(count)
+	return result
+s = input("Введите строку:")
+encoded = rle_encode(s)
+print(encoded)
