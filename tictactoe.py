@@ -45,29 +45,26 @@ class TicTacToe(QWidget):
             if (self.button[i][0].text() ==
                 self.button[i][1].text() ==
                 self.button[i][2].text() != ""):
-                print ("hooooo")
                 return True
 
         for i in range(3):
             if (self.button[0][i].text() ==
                 self.button[1][i].text() ==
                 self.button[2][i].text() != ""):
-                print ("hooooo")
                 return True
 
         if (self.button[0][0].text() ==
             self.button[1][1].text() ==
             self.button[2][2].text() != ""):
-            print ("hooooo")
             return True
 
         if (self.button[0][2].text() ==
             self.button[1][1].text() ==
             self.button[2][0].text() != ""):
-            print ("hooooo")
             return True
 
         return False
+        
     def is_draw(self):
         for row in self.button:
             for button in row:
