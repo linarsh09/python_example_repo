@@ -1,0 +1,7 @@
+Создание виртуально среды
+virtuallenv-
+pip install virtuallenv
+python -m virtuallenv my_env
+cd my_env
+cd Scripts
+activate
