@@ -29,4 +29,3 @@ class Textbook(Book):
         self.__subject = subject
     def get_edition_info():
         return 
-
