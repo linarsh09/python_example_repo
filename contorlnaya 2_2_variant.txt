@@ -1,0 +1,52 @@
+#2 вариант
+class Student:
+    def __init__(self, name, student_id, gpa, courses):
+        self._name = name
+        self._student_id = student_id
+        self._gpa = gpa
+        self._courses = courses
+    def get_name(self):
+        return self._name
+    def set_student_id(self,name):
+        set._name = name
+    def get_student_id(self):
+        return self._student_id
+    def set_student_id(self,student_id):
+        set._student_id = student_id
+    def get_gpa(self):
+        return self._gpa
+    def set_gpa(self,gpa):
+        set._gpa = gpa
+    def get_courses(self):
+        return self._courses
+    def set_courses(self,couses):
+        set._courses = courses
+    
+
+    def add_course(self, course, grade=0):
+        self._corses[course] = grade
+    def remove_course(self,course):
+        if course in self._corses:
+            del self._corses[course]
+    def get_course_count(self):
+        return len(self._courses)
+    def calculate_avg_grade(self):
+        grades = [for i in self._courses.values() if i is None]
+        return sum(grades) / len(grades) if grades else 0.0
+
+    def get_status(self):
+        return f"Студент {self._name}, ID: {self._student_id}
+
+class GraduateStudent:
+    def __init__(self, name, student_id, gpa=0.0, this_topic=""):
+        super().__init__(name, student_id, gpa):
+             self._this_topic = this_topic
+    def get_thesis_topic(self):
+        return self._this_topic
+    def set_this_topic(self, topic):
+        self._this_topic = topic
+
+
+
+
+
