@@ -1,0 +1,55 @@
+class Student():
+    def __init__(self, name, student_id, gpa, courses)
+        self.__name = name
+        self.__student_id = student_id
+        self.__gpa = gpa
+        self.__courses = [] 
+
+    def get_name(self):
+        return self.__name
+    def get_student_id(self):
+        return self.__get_student_id
+    def get_gpa(self):
+        return self.__gpa
+    def get_courses(self):
+        return self.__courses
+
+    def set_name(self, name):
+        self.__name = name
+    def set_student_id(self, student_id):
+        self.__student_id = student_id
+    def set_gpa(self, gpa):
+        self.__gpa = gpa
+
+
+    def add_course_count(self):
+        return len(self.__courses)
+    def add_course(self, course):
+	self.__courses.append(course)
+    def remove_course(self, course):
+	if course in self.__courses:
+	    self.__courses.remove(course)
+    def calculate_average_grade():
+	return self.__gpa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
