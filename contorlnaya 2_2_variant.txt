@@ -47,6 +47,19 @@ class GraduateStudent:
         self._this_topic = topic
 
 
+    def __eq__(self, other):
+        return isinstance(other, Student) and self._student_id == other._student_id
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
+
+    def __hash__(self):
+        return hash(self._student_id)
+
+    def __repr__(self):
+        return "Student(name={self._name}, id={self._student_id}, gpa={self._gpa})"
+
+
 
 
 
