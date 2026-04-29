@@ -1,0 +1,3 @@
+git rm -r --cached <имя_файла_или_папки>
+git commit -m "Удалены ненужные файлы"
+git push origin <имя_ветки>
