@@ -1,5 +1,5 @@
 # первая лаба
-
+from math import e
 def sum(k, n):
     def mult(j, k):
         if j > k:
