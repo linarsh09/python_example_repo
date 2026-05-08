@@ -1,0 +1,86 @@
+1-вариант
+1)Класс book:
+
+from datetime import datetime
+
+class Book:
+    def __init__(self, title, author, pages, year):
+        self.__title = title
+        self.__author = author
+        self.__pages = pages
+        self.__year = year
+
+    # getters
+    def get_title(self):
+        return self.__title
+
+    def get_author(self):
+        return self.__author
+
+    def get_pages(self):
+        return self.__pages
+
+    def get_year(self):
+        return self.__year
+
+    # setters
+    def set_title(self, title):
+        self.__title = title
+
+    def set_author(self, author):
+        self.__author = author
+
+    def set_pages(self, pages):
+        self.__pages = pages
+
+    def set_year(self, year):
+        self.__year = year
+
+    def get_age(self):
+        current_year = datetime.now().year
+        return current_year - self.__year
+
+    def is_old(self):
+        return self.get_age() > 20
+
+    def count_pages_per_year(self):
+        age = self.get_age()
+        if age == 0:
+            return self.__pages
+        return self.__pages / age
+
+2)Класс Textbook:
+
+class Textbook(Book):
+    def __init__(self, title, author, pages, year, subject):
+        super().__init__(title, author, pages, year)
+        self.subject = subject
+
+    def is_old(self):
+        return self.get_age() > 10
+
+    def get_edition_info(self):
+        return f"Textbook subject: {self.subject}"
+
+    def count_pages_per_year(self):
+        age = self.get_age()
+        if age == 0:
+            return self.get_pages()
+        return self.get_pages() / age
+
+3)Переопределение str,lt,add,len:
+
+def get_edition_info(self):
+    return f"Book: {self.get_title()} by {self.get_author()}"
+
+def __str__(self):
+    return f"Book: '{self.get_title()}' by {self.get_author()} ({self.get_pages()} pages, {self.get_year()})"
+
+def __lt__(self, other):
+    return self.get_year() < other.get_year()
+
+def __add__(self, other):
+    return self.get_pages() + other.get_pages()
+
+def __len__(self):
+    return self.get_pages()
