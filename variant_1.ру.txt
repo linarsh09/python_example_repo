@@ -1,0 +1,23 @@
+1-вариант
+
+
+1)
+import math
+
+def recursive_sum(x, n, i=1):
+    if i > n:
+         return 0
+
+    term=(x ** i) / (math.factorial(i) +i ** 2)
+    return term + recursive_sum(x, n, i +1)
+
+
+2)
+def remove_digits(s):
+      if s == "":
+          return ""
+ 
+      if s[0].isdigit():
+          return remove_digits(s[1:])
+      else:
+          return s[0]+remove_digits(s[1:])
