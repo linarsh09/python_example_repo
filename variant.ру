@@ -1,5 +1,5 @@
-1-вариант
-1)Класс book:
+#1-вариант
+#1)Класс book:
 
 from datetime import datetime
 
@@ -49,7 +49,7 @@ class Book:
             return self.__pages
         return self.__pages / age
 
-2)Класс Textbook:
+#2)Класс Textbook:
 
 class Textbook(Book):
     def __init__(self, title, author, pages, year, subject):
@@ -68,7 +68,7 @@ class Textbook(Book):
             return self.get_pages()
         return self.get_pages() / age
 
-3)Переопределение str,lt,add,len:
+#3)Переопределение str,lt,add,len:
 
 def get_edition_info(self):
     return f"Book: {self.get_title()} by {self.get_author()}"
