@@ -1,0 +1,59 @@
+6-вариант
+ 1)Найти все просиые числа:
+  def is_prime(number):
+    if number <= 1:
+        return False
+
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
+            return False
+
+    return True
+
+
+n = int(input())
+
+arr = list(map(int, input().split()))
+
+prime_sum = 0
+prime_count = 0
+
+print("Простые числа:")
+
+for number in arr:
+    if is_prime(number):
+        print(number, end=" ")
+        prime_sum += number
+        prime_count += 1
+
+print("\nСумма:", prime_sum)
+print("Количество:", prime_count)
+
+2)Найти сумму элементов каждого столбца:
+
+n = int(input())
+
+matrix = []
+
+for i in range(n):
+    row = list(map(int, input().split()))
+    matrix.append(row)
+
+column_sums = []
+
+for j in range(n):
+    total = 0
+
+    for i in range(n):
+        total += matrix[i][j]
+
+    column_sums.append(total)
+
+min_column = column_sums.index(min(column_sums))
+
+print("Суммы столбцов:")
+
+for i in range(n):
+    print(column_sums[i])
+
+print("Номер столбца с минимальной суммой:", min_column + 1)
