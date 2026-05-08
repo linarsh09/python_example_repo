@@ -1,7 +1,8 @@
 1-вариант
 
 
-1)
+1)Вычислить рекурсивно:
+
 import math
 
 def recursive_sum(x, n, i=1):
@@ -12,7 +13,8 @@ def recursive_sum(x, n, i=1):
     return term + recursive_sum(x, n, i +1)
 
 
-2)
+2)Написать рекурсивную функцию которая удаляет все цифры из строки
+
 def remove_digits(s):
       if s == "":
           return ""
